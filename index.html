@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            <h1>Dashboard</h1>
+            <ul>
+                <li>Overview</li>
+                <li>Users</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+
+            <header class="topbar">
+                <h1>Users Overview</h1>
+            </header>
+
+            <!-- ADD USER SECTION -->
+            <section class="add-user">
+                <h3>Add User</h3>
+                <input type="text" id="newName" placeholder="Name">
+                <input type="email" id="newEmail" placeholder="Email">
+                <input type="text" id="newCompany" placeholder="Company">
+                <button onclick="addUser()">Add</button>
+            </section>
+
+            <!-- STATS -->
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p id="total-users"></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Unique Companies</h3>
+                    <p id="unique-companies"></p>
+                </div>
+            </section>
+
+            <!-- SEARCH -->
+            <section class="controls">
+                <input type="text" id="search" placeholder="Search users...">
+            </section>
+
+            <!-- TABLE -->
+            <section class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-column="name">Name</th>
+                            <th data-column="email">Email</th>
+                            <th data-column="company">Company</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </section>
+
+            <div class="pagination" id="pagination"></div>
+
+        </main>
+    </div>
+</body>
+</html>
